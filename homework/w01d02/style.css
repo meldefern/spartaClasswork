@@ -1,11 +1,4 @@
-/*
-Colors to use:
-dark blue: #06365f
-light blue: #1c5380
-*/
-* {
-	border:2px solid black;
-}
+
 
 body {
   font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -34,6 +27,7 @@ ul {
 	font-weight: bold;
 	list-style: none;
 	text-align: center;
+	padding-top:52px;
 }
 
 li {
@@ -52,7 +46,8 @@ footer {
 }
 
 #iconGroup {
-	/*margin-left:52px;*/
+	display: inline-block;
+	float:left;
 	height: 82px;
 	width: 318px;
 }
@@ -69,31 +64,36 @@ footer {
 	width: 489px;
 }
 
-.icons {
-	display:inline-block;
-	float: left;
-	/*clear:right;*/
-	/*padding-top: 17px;*/
-	/*margin-left: 52px;*/
-	width:96px;
+
+
+#logo {
+	width:318px;
 	height:78px;
+}
+
+.icon {
+	float:right;
+	width:179px;
+	height:78px;
+	margin-right:-222px;
 	color:#eaedf2;
-	/*font-weight:bold;*/
+	font-weight: bold;
+
+	position:absolute;
+	top: 123px;
+	right:422px;
 }
 
 #frame {
 	height:345px;
 	padding: 8px 40px;
 	clear: left;
-	/*width: 284px;*/
 	background-image: url(images/frame.png);
 	background-repeat: no-repeat;
 	background-size: contain;
-	/*background-position: center top;*/
 	background-color: #ffffff;
 	color:#3f3f3f;
 	font-size:15px;
-	/*letter-spacing: 0.5px;*/
 }
 
 .badges {
