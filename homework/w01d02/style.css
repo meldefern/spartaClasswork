@@ -12,11 +12,35 @@ body {
   margin: 0;
 }
 
+main {
+	margin: 120px;
+}
+
 li {
 	display: inline-block;
 }
 
 footer {
-	
+	clear: left;
 }
 
+#sectionLeft {
+	display:inline-block;
+	float:left;
+	width:370px;
+}
+
+#sectionRight {
+	display: inline-block;
+	float: left;
+	width: 509px;
+}
+
+.icons {
+	display:inline-block;
+	float: left;
+}
+
+.paragraph {
+	clear: left;
+}
