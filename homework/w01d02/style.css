@@ -12,18 +12,37 @@ body {
   margin: 0;
   background-image: url(images/bgtile.png);
   background-repeat: repeat-x;
+  margin-top:95px;
 }
 
 main {
-	margin: 120px;
+	width: 870px;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #06365f;
+	margin: 0px;
+}
+
+#h1top {
+	margin-top: 33px;
+}
+
+span {
+	font-weight: bold;
 }
 
 ul {
+	font-weight: bold;
 	list-style: none;
+	text-align: center;
 }
 
 li {
 	display: inline-block;
+	color: #1c5380;
+	font-size:0.8rem;
 }
 
 footer {
@@ -37,21 +56,24 @@ footer {
 #sectionLeft {
 	display:inline-block;
 	float:left;
-	width:370px;
+	width:369px;
 }
 
 #sectionRight {
 	display: inline-block;
 	float: left;
-	width: 509px;
+	width: 489px;
 }
 
 .icons {
 	display:inline-block;
 	float: left;
+	margin-top
+	height:78px;
 }
 
 #frame {
+	height:345px;
 	padding: 8px 40px;
 	clear: left;
 	/*width: 284px;*/
@@ -65,4 +87,11 @@ footer {
 .badges {
 	display:inline-block;
 	float:left;
+	margin-right: auto;
+	margin-left: auto;
+	height: 55px;
+}
+
+#copyright {
+	color: grey;
 }
