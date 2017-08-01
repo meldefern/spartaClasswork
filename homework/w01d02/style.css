@@ -24,6 +24,10 @@ footer {
 	clear: left;
 }
 
+#iconGroup {
+	height: 82px;
+}
+
 #sectionLeft {
 	display:inline-block;
 	float:left;
@@ -43,4 +47,9 @@ footer {
 
 .paragraph {
 	clear: left;
+}
+
+.badges {
+	display:inline-block;
+	float:left;
 }
