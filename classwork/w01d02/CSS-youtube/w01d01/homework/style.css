@@ -1,0 +1,22 @@
+header {
+	background-color:#d9d9d9;
+}
+
+h1 {
+	text-align:center;
+	font-family:"Comic Sans MS";
+	font-size: 150px;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	background-color:#f2f2f2;
+}
+
+li {
+	outline-style: bold;
+	outline-color: #867474;
+}

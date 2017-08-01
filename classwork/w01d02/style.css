@@ -1,0 +1,65 @@
+html {
+	font-size:16px;
+}
+
+h1 {
+	color:aquamarine;
+	font-family:Helvetica;
+}
+
+p {
+	font-size:20px;
+}
+
+.special {
+	text-decoration: underline;
+}
+
+#name {
+	font-weight:bold;
+}
+
+#boring {
+	text-decoration: none;
+}
+
+li.special {
+	color:pink;
+}
+
+ul li {
+	font-size: 50px;
+}
+
+section:nth-child(2) {
+	background-color: grey;
+}
+
+/* Layout */
+header {
+	border:2px solid red;
+}
+
+main {
+	border: 2px solid blue;
+}
+
+aside {
+	background-color:green;
+	width:200px;
+	height:500px;
+	display: inline-block;
+}
+
+footer {
+	border: 2px solid yellow;
+}
+
+section {
+	padding: 20px;
+	margin:20px;
+	width:400px;
+	height:250px;
+	display: inline-block;
+	float:left;
+}
