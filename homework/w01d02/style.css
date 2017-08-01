@@ -10,10 +10,16 @@ light blue: #1c5380
 body {
   font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
+  background-image: url(images/bgtile.png);
+  background-repeat: repeat-x;
 }
 
 main {
 	margin: 120px;
+}
+
+ul {
+	list-style: none;
 }
 
 li {
@@ -45,8 +51,15 @@ footer {
 	float: left;
 }
 
-.paragraph {
+#frame {
+	padding: 8px 40px;
 	clear: left;
+	/*width: 284px;*/
+	background-image: url(images/frame.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	/*background-position: center top;*/
+	background-color: #ffffff;
 }
 
 .badges {
