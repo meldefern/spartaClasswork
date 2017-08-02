@@ -1,0 +1,76 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+	background-color: #fff;
+	background-image: url("../images/bgtile.png");
+	background-repeat: repeat-x;
+  	font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	margin: 0;
+}
+
+#container {
+	margin: 90px auto 0;
+	width: 880px;
+}
+
+h2 {
+	color: #06365f;
+	margin-top: 0;
+}
+
+section {
+	display: inline-block;
+}
+
+section#left {
+	float:left;
+}
+
+section#right {
+	float: right;
+	width: 550px;
+}
+
+main {
+	background-image: url("../images/frame.png");
+	background-repeat:	no-repeat;
+	background-size: contain;
+	padding: 40px;
+	width:488px;
+}
+
+footer {
+	display: inline-block;
+	width:100%;
+	text-align: center;
+	clear: both;
+}
+
+ul {
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	margin: 0 20px;
+	padding: 0;
+}
+
+li {
+	color:#1c5380;
+	display: inline;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 10px;
+	font-size: 11px;
+}
+
+li#copy {
+	color:#bababa;
+}
+
+#badges img {
+	margin-right: 20px;
+}
