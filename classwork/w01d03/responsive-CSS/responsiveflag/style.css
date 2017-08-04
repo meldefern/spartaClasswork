@@ -1,0 +1,41 @@
+
+div {
+	display: inline-block;
+/*	width: 33.33%;
+	height: 100%;*/
+	height:33.3vh;
+	width: 100vw;
+	float: left;
+}
+
+.black {
+	background-color: black;
+	
+}
+
+.red {
+	background-color: red;
+	
+}
+
+.yellow {
+	background-color: yellow;
+	
+}
+/*.black .red .yellow {
+	height: 100vh;
+	width: 100vw;
+}*/
+
+section {
+	width: 100vw;
+	height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+	div {
+		width: 33.3px;
+		height: 100px;
+	}
+
+}
