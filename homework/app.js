@@ -1,20 +1,19 @@
-var gamesPlayed = 0;
-var winArray = [];
 var wins = 0;
 var losses = 0;
 playGame();
 
 function playGame(){
+	var gamesPlayed = 0;
+	var winArray = [];
 	while(gamesPlayed < 5){
 		var user = prompt("1-Rock\n2-Paper\n3-Scissors");
 		var comp = Math.floor(Math.random() * 3) + 1;
 
-		var result = compare(user,comp);
+		var result = compare(user,comp,winArray);
 		gamePlay(user,comp, result);
-		winCounter(winArray);
-
 		gamesPlayed++;
 	} 
+	winCounter(winArray);
 	decide(gamesPlayed, wins, losses);
 }
 
@@ -29,7 +28,7 @@ function gamePlay(user,comp,result){
 	}
 }
 
-function compare (user, comp){
+function compare (user, comp, winArray){
 	// rock beats scissors, scissors beats paper, paper beats rock
 	if ((user == 1 && comp == 3) || (user == 2 && comp == 1) || (user == 3 && comp == 2)){
 		winArray.push(true);
@@ -50,7 +49,7 @@ function winCounter(winArray){
 
 function decide(gamesPlayed, wins, losses){
 	if (wins > losses) {
-		alert("Player wins the match!")
+		alert("You win the match!")
 	} else if (wins < losses) {
 		alert("Computer wins the match!")
 	} else {
