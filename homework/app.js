@@ -1,36 +1,59 @@
 var gamesPlayed = 0;
+var winArray = [];
 var wins = 0;
+var losses = 0;
 playGame();
 
 function playGame(){
-	while(gamesPlayed < 5 || wins < 3){
+	while(gamesPlayed < 5){
 		var user = prompt("1-Rock\n2-Paper\n3-Scissors");
 		var comp = Math.floor(Math.random() * 3) + 1;
 
 		var result = compare(user,comp);
 		gamePlay(user,comp, result);
-		winCounter(result);
+		winCounter(winArray);
 
 		gamesPlayed++;
 	} 
+	decide(gamesPlayed, wins, losses);
 }
 
 function gamePlay(user,comp,result){
 	alert("User: " + user + "		Computer: " + comp);
-	if (result == true) alert("You win!");
-	if (result == false) alert("Computer wins!");
-	if (result == null) alert("Draw!")
+	if (result == 1){ 
+		alert("You win!")
+ 	}else if (result == 0) {
+ 		alert("Computer wins!")
+ 	}else{
+		alert("Draw!")
+	}
 }
 
 function compare (user, comp){
+	// rock beats scissors, scissors beats paper, paper beats rock
 	if ((user == 1 && comp == 3) || (user == 2 && comp == 1) || (user == 3 && comp == 2)){
-		return true;
-	}
+		winArray.push(true);
+		return 1;
+	} 
 	if ((comp == 1 && user == 3) || (comp == 2 && user == 1) || (comp == 3 && user == 2)){
-		return false;
+		winArray.push(false);
+		return 0;
 	}
 }
 
-function winCounter(result){
-	if (result == true) win++;
+function winCounter(winArray){
+	for(var i = 0; i < winArray.length; i++) {
+		if (winArray[i] == true) wins++;
+		if (winArray[i] == false) losses++;
+	}
+}
+
+function decide(gamesPlayed, wins, losses){
+	if (wins > losses) {
+		alert("Player wins the match!")
+	} else if (wins < losses) {
+		alert("Computer wins the match!")
+	} else {
+		alert("It's a draw!")
+	}
 }
