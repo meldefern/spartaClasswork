@@ -4,7 +4,6 @@ var num2;
 var temp;
 var op;
 var result = 0;
-var btnPressed = false;
 // Variables defined in global scope, not the best idea
 
 // Setup eventListeners
@@ -18,8 +17,6 @@ for(var i = 0; i<numberButtons.length; i++){
 
 	numButton.addEventListener('click', function(event){
 		console.log(this.value + ' was clicked')
-
-		btnPressed = true;
 
 		switch(this.value) {
 			case("0"):
@@ -62,10 +59,6 @@ for(var i = 0; i<numberButtons.length; i++){
 			num2 =temp;
 			console.log("num2"+num2);
 		}
-
-		// if(num1 != 0 && num2 != 0){
-		// 	calculate(num1,num2);
-		// }
 	});
 };
 for(var i = 0; i<opButtons.length; i++){
@@ -73,8 +66,6 @@ for(var i = 0; i<opButtons.length; i++){
 
 	opButton.addEventListener('click', function(event){
 		console.log(this.value + ' was clicked')
-
-		btnPressed = true;
 
 		switch(this.value) {
 			case("+"):
@@ -97,25 +88,20 @@ for(var i = 0; i<opButtons.length; i++){
 equalsButton[0].addEventListener('click', function(event){
 	console.log(this.value + ' was clicked')
 
-	btnPressed = true;
-
-		//call function to calculate sum
 		calculate(num1, num2, op);
 });
 
 clearButton[0].addEventListener('click', function(event){
 	console.log(this.value + ' was clicked')
 
-	btnPressed = true;
-
-		switch(this.value) {
-			case("c"):
-				op = 'c';
-				break;
-		}
-
+		num1 = null;
+		num2 = null;
+		temp = null;
+		op = null;
+		result = null;
 });
 
+// Functions for calculator
 function calculate(num1, num2, op){
 	switch(op) {
 	case('+'):
@@ -144,7 +130,7 @@ function calculate(num1, num2, op){
 // 	updatedDisplay(display.)
 // })
 
-// Functions for calculator
+
 
 
 
