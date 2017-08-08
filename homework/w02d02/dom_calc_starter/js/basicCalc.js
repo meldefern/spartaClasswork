@@ -2,8 +2,9 @@
 var num1;
 var num2;
 var temp;
+var op;
 var result = 0;
-var operatorPressed = false;
+var btnPressed = false;
 // Variables defined in global scope, not the best idea
 
 // Setup eventListeners
@@ -13,12 +14,12 @@ var equalsButton = document.getElementsByClassName('eq');
 var clearButton = document.getElementsByClassName('clear');
 
 for(var i = 0; i<numberButtons.length; i++){
-	var nButton = numberButtons[i];
+	var numButton = numberButtons[i];
 
-	nButton.addEventListener('click', function(event){
+	numButton.addEventListener('click', function(event){
 		console.log(this.value + ' was clicked')
 
-		operatorPressed = true;
+		btnPressed = true;
 
 		switch(this.value) {
 			case("0"):
@@ -73,68 +74,68 @@ for(var i = 0; i<opButtons.length; i++){
 	opButton.addEventListener('click', function(event){
 		console.log(this.value + ' was clicked')
 
-		operatorPressed = true;
+		btnPressed = true;
 
 		switch(this.value) {
 			case("+"):
-				temp = '+';
+				op = '+';
 				break;
 			case("-"):
-				temp = '-';
+				op = '-';
 				break;
 			case("*"):
-				temp = '*';
+				op = '*';
 				break;
 			case("/"):
-				temp = '/';
+				op = '/';
 				break;
 		}
+
 	});
 };
 
 equalsButton[0].addEventListener('click', function(event){
 	console.log(this.value + ' was clicked')
 
-	operatorPressed = true;
+	btnPressed = true;
 
-		switch(this.value) {
-			case("="):
-				temp = '=';
-				break;
-		}
+		//call function to calculate sum
+		calculate(num1, num2, op);
 });
 
 clearButton[0].addEventListener('click', function(event){
 	console.log(this.value + ' was clicked')
 
-	operatorPressed = true;
+	btnPressed = true;
 
 		switch(this.value) {
 			case("c"):
-				temp = 'c';
+				op = 'c';
 				break;
 		}
 
 });
 
-// function calculate(num1, num2){
-	
-// }
+function calculate(num1, num2, op){
+	switch(op) {
+	case('+'):
+		result = num1 + num2;
+		break;
+	case('-'):
+		result = num1 - num2;
+		break;
+	case('*'):
+		result = num1 * num2;
+		break;
+	case('/'):
+		result = num1 / num2;
+		break;
+	}
+	console.log(result);
+}
 
-// switch(operator) {
-// 	case('+'):
-// 		num1 + num2;
-// 		break;
-// 	case('-'):
-// 		num1 - num2;
-// 		break;
-// 	case('*'):
-// 		num1 * num2;
-// 		break;
-// 	case('/'):
-// 		num1 / num2;
-// 		break;
-// }
+
+
 
 // var display = document.getElementsByClassName('display');
 // console.log(display);		
