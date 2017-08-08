@@ -26,7 +26,7 @@ for (var i=0; i < rounds; i++) {
 for (var j=0; j<playerWin.length; j++){
 	if (playerWin[j] == true) trueCount++;
 	if (playerWin[j] == false) falseCount++;
-	}
+}
  
 if (trueCount > falseCount) {
 		alert("You win the Match!");
