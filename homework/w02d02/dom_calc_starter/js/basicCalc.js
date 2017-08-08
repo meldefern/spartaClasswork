@@ -4,6 +4,7 @@ var num2;
 var temp;
 var op;
 var result = 0;
+document.getElementsByClassName('display')[0].value = result;
 // Variables defined in global scope, not the best idea
 // Setup eventListeners
 var numberButtons = document.getElementsByClassName('number');
@@ -58,6 +59,7 @@ clearButton[0].addEventListener('click', function(event){
 		temp = null;
 		op = null;
 		result = null;
+		document.getElementsByClassName('display')[0].value = 0;
 });
 
 // Functions for calculator
