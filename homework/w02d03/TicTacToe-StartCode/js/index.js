@@ -43,15 +43,16 @@ function gamePlay(){
 				$(box).addClass('O').html('O');
 				$('.playerTurn').html("It is X's turn");
 			}
-			playerturn++;
-			if (playerturn >= 5){
+			
+			if (playerturn >= 4){
 				//start comparisons
-				if (playerturn%2 == 0){
-					compare(player1moves);
-				} else {
+				if (playerturn%2 == 1){
 					compare(player2moves);
+				} else {
+					compare(player1moves);
 				}
 			}
+			playerturn++;
 		})
 
 	});
