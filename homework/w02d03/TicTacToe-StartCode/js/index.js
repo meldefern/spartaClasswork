@@ -47,9 +47,10 @@ function getBox(){
 				$(box).html('O');
 			}
 			playerturn++;
-			if (playerturn > 4){
+			if (playerturn > 5){
 				//start comparisons
-				
+				console.log('i want to compare now')
+				compare(player1moves, player2moves);
 			}
 		})
 
@@ -75,3 +76,32 @@ getBox();
 //		else
 //			continue loop
 //			clear scoreCount after every subarray
+
+function compare(player1array, player2array){
+	//compare each element in playerarray
+	for(var i = 0; i < player1array.length; i++){
+		// with each subarray inside wincombinations array
+		//console.log('inside playerarray')
+		//console.log('scoreCount',scoreCount)
+		//console.log('out wc', winCombinations.length)
+		for(var subj = 0; subj < winCombinations.length; subj++){
+			//console.log('out wc', winCombinations.length)
+			//console.log('inside winCombinations subarray')
+			//console.log('player1array',[i], 'winCombinations',[subj])
+			console.log('wincom subj', winCombinations[subj])
+			for (var j = 0; j < winCombinations[subj].length; j++){
+				var abc = winCombinations[subj];
+				//console.log('subj', abc[j])
+				if (player1array[i] == abc[j]){
+					scoreCount+= 1;
+					console.log(scoreCount)
+					if (scoreCount === 3) console.log("win");
+				}
+			}
+		} 
+		scoreCount = 0;
+	}
+
+
+
+}
