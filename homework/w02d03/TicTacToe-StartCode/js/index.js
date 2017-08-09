@@ -9,13 +9,9 @@ scoreCount = 0;
 // gamePlay
 function gamePlay(){
 //**// playerturn set to true
-// 	while(playerturn < 5)
-// 		if (playerturn%2 == 0){
 // //  player1move
-// 			player1move = $()
 // //		-player1 clicks on box
 // //		-player1moves.push(---boxattribute---)
-// 		}
 // player2move
 //		-player2 clicks on box
 //		-player2moves.push(---boxattribute---)
@@ -33,12 +29,21 @@ function gamePlay(){
 function getBox(){
 	var clickedBox;
 	var boxes = $('td');
+	playerturn = 0;
 
 	$(boxes).each(function(index, box){
 		$(box).on("click",function(){
-		clickedBox = ($(box).attr('data-num'));
-		return clickedBox;
+			clickedBox = ($(box).attr('data-num'));
+			if (playerturn%2 == 0){
+				player1moves.push(clickedBox);
+				console.log('player1moves arr',player1moves)
+			} else {
+				player2moves.push(clickedBox);
+				console.log('player2moves arr',player2moves)
+			}
+			playerturn++;
 		})
+		return clickedBox;
 	})
 	
 	
