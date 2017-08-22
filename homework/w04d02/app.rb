@@ -16,3 +16,7 @@ end
 post '/music' do
 	"create - create a new song"
 end
+
+get '/music/:id' do
+	"show - display a specific song"
+end
