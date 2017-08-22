@@ -55,6 +55,7 @@ class Person
     end
 
     begin
+        
         puts my_array[$i].swapcase!
         $i += 1
     end while $i < $length
