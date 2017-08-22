@@ -12,3 +12,7 @@ end
 get '/music/new' do
 	"new - return an HTML form for creating a new photo"
 end
+
+post '/music' do
+	"create - create a new song"
+end
