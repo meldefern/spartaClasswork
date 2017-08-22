@@ -21,10 +21,10 @@ for(var i = 0; i<numberButtons.length; i++){
 
 		if (num1 == null){
 			num1 = temp;
-			document.getElementsByClassName('display')[0].value += num1;
+			document.getElementsByClassName('display')[0].value = num1;
 		} else {
 			num2 =temp;
-			document.getElementsByClassName('display')[0].value += num2;
+			document.getElementsByClassName('display')[0].value = num2;
 		}
 	});
 };

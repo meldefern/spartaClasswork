@@ -124,8 +124,6 @@ def trip
 
 	puts "Your trip will take #{time} hours, and cost #{cost}"
 
-
-
 end
 
 calculator
