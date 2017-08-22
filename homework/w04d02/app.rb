@@ -28,3 +28,7 @@ end
 put '/music/:id' do
 	"update - update a specific song"
 end
+
+delete '/music/:id' do
+	"destroy - delete a specific photo"
+end
