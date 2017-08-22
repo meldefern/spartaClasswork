@@ -10,7 +10,7 @@ get '/music' do
 end
 
 get '/music/new' do
-	"new - return an HTML form for creating a new photo"
+	"new - return an HTML form for creating a new song"
 end
 
 post '/music' do
@@ -19,4 +19,8 @@ end
 
 get '/music/:id' do
 	"show - display a specific song"
+end
+
+get '/music/:id/edit' do
+	"edit - return an HTML form for editing a song"
 end
