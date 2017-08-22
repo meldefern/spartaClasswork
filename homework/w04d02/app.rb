@@ -24,3 +24,7 @@ end
 get '/music/:id/edit' do
 	"edit - return an HTML form for editing a song"
 end
+
+put '/music/:id' do
+	"update - update a specific song"
+end
