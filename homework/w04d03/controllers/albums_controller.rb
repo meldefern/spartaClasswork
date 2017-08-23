@@ -66,7 +66,20 @@ class AlbumsController < Sinatra::Base
 	end
 
 	post '/' do
-		"CREATE"
+		
+		id = $albums.length
+
+		new_album = {
+			id: id,
+			title: params[:title],
+			release: params[:release],
+			review: params[:review]
+		}
+
+		$albums.push new_album
+
+		redirect "/"
+
 	end
 
 	delete '/:id' do
