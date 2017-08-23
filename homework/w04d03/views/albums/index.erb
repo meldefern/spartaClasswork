@@ -1,0 +1,9 @@
+<% @albums.each do |album| %>
+	<div>
+		<h3>
+			<a href="/<%= album[:id] %>"><%= album[:title] %></a>
+		</h3>
+		<p><%= album[:release] %></p>
+		<p><%= album[:review] %></p>
+	</div>
+<% end %>
