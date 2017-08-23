@@ -2,21 +2,24 @@ class AlbumsController < Sinatra::Base
 
 	$albums = [{
 			id: 0,
-			title: 'Album 1',
-			release: '2017-01-01',
-			review: 'This is a review for Album 1'
+			title: 'Lana Del Rey - \'Lust for Life',
+			release: '2017-07-21',
+			cover: 'https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/07/LANA_DEL_REY_LUST_FOR_LIFE_1000-300x300.jpeg',
+			review: '4/5 Stars'
 		},
 		{
 			id:1,
-			title: 'Album 2',
-			release: '2017-01-02',
-			review: 'This is a review for Album 2'
+			title: 'Arcade Fire - \'Everything Now',
+			release: '2015-07-28',
+			cover: 'https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/07/Arcade-Fire-Everything-Now-Cover_106286491_209146992-300x300.jpg',
+			review: '5/5 Stars'
 		},
 		{
 			id:2,
-			title: 'Album 3',
-			release: '2017-01-03',
-			review: 'This is a review for Album 3'
+			title: 'Dizzee Rascal - \'Raskit',
+			release: '2017-07-21',
+			cover: 'https://ksassets.timeincuk.net/wp/uploads/sites/55/2017/07/Dizzee-Rascal-Raskit-art_107629392_208154771-300x300.jpg',
+			review: '4/5 Stars'
 		}]
 
 	# sets root as the parent-directory of the current file
@@ -81,6 +84,7 @@ class AlbumsController < Sinatra::Base
 			id: id,
 			title: params[:title],
 			release: params[:release],
+			cover: params[:cover],
 			review: params[:review]
 		}
 

@@ -4,6 +4,9 @@
 			<a href="/<%= album[:id] %>"><%= album[:title] %></a>
 		</h3>
 		<p><%= album[:release] %></p>
+		<div class="album-cover">
+			<img class="album-cover" src="<%= album[:cover] %>">
+		</div>
 		<p><%= album[:review] %></p>
 	</div>
 <% end %>

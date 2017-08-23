@@ -1,4 +1,7 @@
 <h1><%= @album[:title] %></h1>
 <p><%= @album[:release] %></p>
+<div class="album-cover">
+	<img src="<%= @album[:cover] %>">
+</div>
 <p><%= @album[:review] %></p>
 <a href="/<%= @album[:id] %>/edit">Edit</a>
