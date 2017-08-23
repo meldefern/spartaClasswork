@@ -60,7 +60,9 @@ class AlbumsController < Sinatra::Base
 	end
 
 	get '/:id/edit' do
-		"EDIT"
+
+		erb :'albums/edit'
+
 	end
 
 	post '/' do
