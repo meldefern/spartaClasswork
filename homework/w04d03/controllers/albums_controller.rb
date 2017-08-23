@@ -44,11 +44,16 @@ class AlbumsController < Sinatra::Base
 	end
 
 	put '/' do
-		"CREATE"
+		"UPDATE"
 	end
 
 	get '/:id' do
-		"SHOW"
+		id = params[:id].to_i
+
+		@album = $albums[id]
+
+		erb :'albums/show'
+
 	end
 
 	get '/:id/edit' do
@@ -56,7 +61,7 @@ class AlbumsController < Sinatra::Base
 	end
 
 	post '/' do
-		"UPDATE"
+		"CREATE"
 	end
 
 	delete '/:id' do
