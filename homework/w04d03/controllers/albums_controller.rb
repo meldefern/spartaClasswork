@@ -1,4 +1,4 @@
-class PostsController < Sinatra::Base 
+class AlbumsController < Sinatra::Base 
 
 	# sets root as the parent-directory of the current file
 	set :root, File.join(File.dirname(__FILE__), '..')
@@ -9,4 +9,14 @@ class PostsController < Sinatra::Base
 	configure :development do
 		register Sinatra::Reloader
 	end
+
+	get '/' do
+		"Homepage"
+	end
+
+	get '/new' do
+		""
+	end
+
+
 end
