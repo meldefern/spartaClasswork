@@ -41,6 +41,8 @@ class AlbumsController < Sinatra::Base
 
 	get '/new' do
 
+		@title = "Album Reviews"
+
 		erb :'albums/new'
 
 	end
@@ -48,10 +50,12 @@ class AlbumsController < Sinatra::Base
 	put '/' do
 
 		"UPDATE"
-		
+
 	end
 
 	get '/:id' do
+
+		@title = "Album Reviews"
 
 		id = params[:id].to_i
 
@@ -62,6 +66,8 @@ class AlbumsController < Sinatra::Base
 	end
 
 	get '/:id/edit' do
+
+		@title = "Album Reviews"
 
 		erb :'albums/edit'
 
