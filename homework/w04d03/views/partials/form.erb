@@ -1,21 +1,25 @@
 <form action="/" method="POST">
-	<div>
-		<label>Title</label>
-		<input type="text" name="title" placeholder="Enter a Title">
+	<div class="row">
+		<div class="col-md-6 mb-3">
+			<label>Title</label>
+			<input type="text" name="title" placeholder="Enter a Title">
+		</div>
+		<div class="col-md-6 mb-3">
+			<label>Release</label>
+			<input type="date" name="release" placeholder="YYYY-MM-DD">
+		</div>
 	</div>
-	<div>
-		<label>Release</label>
-		<input type="date" name="release" placeholder="YYYY-MM-DD">
+	<div class="row">
+		<div class="col-md-6 mb-3">
+			<label>Album Cover</label>
+			<input type="text" name="cover" placeholder="Image URL">
+		</div>
+		<div class="col-md-6 mb-3">
+			<label>Review</label>
+			<textarea name="review" placeholder="The Review"></textarea>
+		</div>
 	</div>
-	<div>
-		<label>Album Cover</label>
-		<input type="text" name="cover" placeholder="Image URL">
-	</div>
-	<div>
-		<label>Review</label>
-		<textarea name="review" placeholder="The Review"></textarea>
-	</div>
-	<div>
+	<div class="row">
 		<input type="submit" name="Save Album">
 	</div>
 </form>
