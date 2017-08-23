@@ -40,7 +40,9 @@ class AlbumsController < Sinatra::Base
 	end
 
 	get '/new' do
-		"NEW"
+
+		erb :'albums/new'
+
 	end
 
 	put '/' do
@@ -48,6 +50,7 @@ class AlbumsController < Sinatra::Base
 	end
 
 	get '/:id' do
+
 		id = params[:id].to_i
 
 		@album = $albums[id]
