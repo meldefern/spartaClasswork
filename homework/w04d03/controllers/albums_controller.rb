@@ -15,7 +15,27 @@ class AlbumsController < Sinatra::Base
 	end
 
 	get '/new' do
-		""
+		"NEW"
+	end
+
+	put '/' do
+		"CREATE"
+	end
+
+	get '/:id' do
+		"SHOW"
+	end
+
+	get '/:id/edit' do
+		"EDIT"
+	end
+
+	post '/' do
+		"UPDATE"
+	end
+
+	delete '/:id' do
+		"DESTROY"
 	end
 
 
