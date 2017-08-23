@@ -3,19 +3,19 @@ class AlbumsController < Sinatra::Base
 	$albums = [{
 			id: 0,
 			title: 'Album 1',
-			release: 'date 01',
+			release: '2017-01-01',
 			review: 'This is a review for Album 1'
 		},
 		{
 			id:1,
 			title: 'Album 2',
-			release: 'date 02',
+			release: '2017-01-02',
 			review: 'This is a review for Album 2'
 		},
 		{
 			id:2,
 			title: 'Album 3',
-			release: 'date 03',
+			release: '2017-01-03',
 			review: 'This is a review for Album 3'
 		}]
 
