@@ -46,7 +46,9 @@ class AlbumsController < Sinatra::Base
 	end
 
 	put '/' do
+
 		"UPDATE"
+		
 	end
 
 	get '/:id' do
@@ -83,7 +85,9 @@ class AlbumsController < Sinatra::Base
 	end
 
 	delete '/:id' do
+
 		"DESTROY"
+
 	end
 
 end
