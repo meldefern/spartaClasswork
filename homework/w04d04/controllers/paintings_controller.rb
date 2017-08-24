@@ -60,7 +60,17 @@ class PaintingsController < Sinatra::Base
 
 	post '/' do
 
-		"create"
+		id = $paintings.length
+
+		new_post = {
+			id: id,
+			title: params[:title],
+			image: params[:image]
+		}
+
+		$paintings.push new_post
+
+		redirect '/'
 
 	end
 
