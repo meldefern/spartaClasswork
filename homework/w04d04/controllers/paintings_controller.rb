@@ -3,17 +3,17 @@ class PaintingsController < Sinatra::Base
 	$paintings = [{
 		id: 0,
 		title: 'Painting 1',
-		image: 'url'
+		image: 'IMG_5099.JPG'
 	},
 	{
 		id: 1,
 		title: 'Painting 2',
-		image: 'url'
+		image: 'IMG_5101.JPG'
 	},
 	{
 		id: 2,
 		title: 'Painting 3',
-		image: 'url'
+		image: 'IMG_5104.JPG'
 	}]
 
 	# sets root as the parent-directory of the current file
@@ -28,7 +28,7 @@ class PaintingsController < Sinatra::Base
 
 	get '/' do
 
-		@title = "Gallery"
+		@title = "My Gallery"
 
 		@paintings = $paintings
 
@@ -96,7 +96,7 @@ class PaintingsController < Sinatra::Base
 		$paintings.delete_at(id)
 
 		redirect '/'
-		
+
 	end
 
 	get '/:id/edit' do

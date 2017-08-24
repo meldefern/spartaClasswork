@@ -1,5 +1,5 @@
 <h1><%= @painting[:title] %></h1>
-<img src="/<%= @painting[:image] %>">
+<img src="/images/<%= @painting[:image] %>">
 <a href="/<%= @painting[:id] %>/edit">Edit</a>
 
 <form action="<%= @painting[:id] %>" method="POST">

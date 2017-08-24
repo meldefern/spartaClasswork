@@ -1,10 +1,13 @@
-<% @paintings.each do |painting| %>
-	<div>
-		<h3>
-			<a href="/<%= painting[:id] %>"><%= painting[:title] %></a>
-		</h3>
-		<p><%= painting[:content] %></p>
+<div class="container">
+	<div class="row">
+	<% @paintings.each do |painting| %>
+		<div class="col-md-4" class="columns">
+			<h3>
+				<a href="/<%= painting[:id] %>"><%= painting[:title] %></a>
+			</h3>
+			<img src="/images/<%= painting[:image] %>">
+		</div>
+	<% end %>	
 	</div>
-<% end %>
-
+</div>
 <%# td -- a row of three %>
