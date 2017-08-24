@@ -38,7 +38,13 @@ class PaintingsController < Sinatra::Base
 
 	get '/new' do
 
-		"new"
+		@painting = {
+			id: "",
+			title: "",
+			content: "",
+		}
+
+		erb :'paintings/new'
 
 	end
 
@@ -72,7 +78,11 @@ class PaintingsController < Sinatra::Base
 
 	get '/:id/edit' do
 
-		"edit"
+		id = params[:id].to_i
+
+		@painting = $paintings[id]
+
+		erb :'paintings/edit'
 
 	end
 end
