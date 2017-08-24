@@ -76,7 +76,16 @@ class PaintingsController < Sinatra::Base
 
 	put '/:id' do
 
-		"update"
+		id = params[:id].to_i
+
+		painting = $paintings[id]
+
+		painting[:title] = params[:title]
+		painting[:image] = params[:image]
+
+		$paintings[id] = painting
+
+		redirect '/'
 
 	end
 
