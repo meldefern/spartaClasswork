@@ -91,8 +91,12 @@ class PaintingsController < Sinatra::Base
 
 	delete '/:id' do
 
-		"delete"
+		id = params[:id].to_i
 
+		$paintings.delete_at(id)
+
+		redirect '/'
+		
 	end
 
 	get '/:id/edit' do

@@ -1,3 +1,9 @@
 <h1><%= @painting[:title] %></h1>
 <img src="/<%= @painting[:image] %>">
 <a href="/<%= @painting[:id] %>/edit">Edit</a>
+
+<form action="<%= @painting[:id] %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="Delete">
+	
+</form>
