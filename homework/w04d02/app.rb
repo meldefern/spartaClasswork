@@ -5,7 +5,8 @@ get '/' do
 	"Route"	
 end
 
-get '/music' do
+# songs not music
+get '/music' do 
 	"index - display a list of all the music"
 end
 
