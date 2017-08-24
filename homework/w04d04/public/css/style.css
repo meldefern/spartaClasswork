@@ -1,3 +1,16 @@
+h1 {
+	text-align: center;
+}
+
+#index_title {
+	padding-bottom: 20px;
+}
+
 .columns {
 	display: inline-block;
+}
+
+#image {
+	height:30vh;
+	margin: 0 auto;
 }
