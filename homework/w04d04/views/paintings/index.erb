@@ -1,0 +1,8 @@
+<% @paintings.each do |painting| %>
+	<div>
+		<h3>
+			<a href="/<%= painting[:id] %>"><%= painting[:title] %></a>
+		</h3>
+		<p><%= painting[:content] %></p>
+	</div>
+<% end %>
