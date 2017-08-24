@@ -3,17 +3,17 @@ class PaintingsController < Sinatra::Base
 	$paintings = [{
 		id: 0,
 		title: 'Painting 1',
-		painting: 'url'
+		image: 'url'
 	},
 	{
 		id: 1,
 		title: 'Painting 2',
-		painting: 'url'
+		image: 'url'
 	},
 	{
 		id: 2,
 		title: 'Painting 3',
-		painting: 'url'
+		image: 'url'
 	}]
 
 	# sets root as the parent-directory of the current file
@@ -44,7 +44,11 @@ class PaintingsController < Sinatra::Base
 
 	get '/:id' do
 
-		"show"
+		id = params[:id].to_i
+
+		@painting = $paintings[id]
+
+		erb :'paintings/show'
 
 	end
 
