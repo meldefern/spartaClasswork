@@ -38,6 +38,12 @@ class PostsController < Sinatra::Base
 	end
 
 	get '/new' do
+
+		@post = {
+			id: "",
+			title: "",
+			content: "",
+		}
 		
 		erb :'posts/new'
 
@@ -71,19 +77,37 @@ class PostsController < Sinatra::Base
 
 	put '/:id' do
 
-		"UPDATE #{params[:id]} "
+		id = params[:id].to_i
+
+		post = $posts[id]
+
+		post[:title] = params[:title]
+		post[:content] = params[:content]
+
+		$posts[id] = post
+
+		redirect '/'
 
 	end
 
 	delete '/:id' do
 
-		"DELETE #{params[:id]}"
+		#get the id
+		id = params[:id].to_i
+
+		#delete the post from the array
+		$posts.delete_at(id)
+
+		#redirect back to the homepage
+		redirect '/'
 
 	end
 
 	get '/:id/edit' do
 
-		"EDIT: #{params[:id]}"
+		id = params[:id].to_i
+
+		@post = $posts[id]
 
 		erb :'posts/edit'
 
