@@ -1,11 +1,11 @@
 <% @paintings.each do |painting| %>
 <div>
-	<a href="/<%= painting.id %>"><img src="/<%= painting.photo %>"></a>
+	<img src="/<%= painting.photo %>">
 	<div>
 		<%= painting.description %>
 	</div>
 	<div>
-		<%= painting.day %>
+		<a href="/<%= painting.id %>"><%= painting.day %></a>
 	</div>
 </div>
 <% end %>

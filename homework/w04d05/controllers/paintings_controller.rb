@@ -28,7 +28,13 @@ class PaintingsController < Sinatra::Base
 
 	get '/:id' do
 
-		"SHOW"
+		# get the ID and turn it in to an integer
+		id = params[:id].to_i
+
+		# make a single painting object available in the template
+		@painting = Painting.find id
+
+		erb :'paintings/show'
 
 	end
 

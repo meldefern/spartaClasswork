@@ -25,6 +25,22 @@ class Painting
 
 	end
 
+	def self.find id
+
+		conn = self.open_connection
+
+		sql = "SELECT * FROM painting WHERE id=#{id} LIMIT 1"
+
+		# PG always returns an array
+		paintings = conn.exec(sql)
+
+		# bind just the first and return
+		painting = self.hydrate paintings[0]
+
+		painting
+
+	end
+
 	def self.hydrate painting_data
 
 		painting = Painting.new
@@ -35,6 +51,7 @@ class Painting
 		painting.day = painting_data['day']
 
 		painting
+
 	end
 
 
