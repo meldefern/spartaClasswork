@@ -1,11 +1,16 @@
-<% @paintings.each do |painting| %>
-<div>
-	<img src="/<%= painting.photo %>">
-	<div>
-		<%= painting.description %>
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-3 pt-3">
+	<div class="container-fluid">
+		<% @paintings.each do |painting| %>
+		<div class="row">
+			<img src="/<%= painting.photo %>">
+			<div>
+				<%= painting.description %>
+			</div>
+			<div>
+				<a href="/<%= painting.id %>"><%= painting.day %></a>
+			</div>
+		</div>	
 	</div>
-	<div>
-		<a href="/<%= painting.id %>"><%= painting.day %></a>
-	</div>
-</div>
+
 <% end %>
+</main>
