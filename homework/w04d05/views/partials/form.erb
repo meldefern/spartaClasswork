@@ -4,20 +4,20 @@
 	<% end %>
 	<div>
 		<label>Painting URL</label>
-		<input type="text" name="photo" placeholder="Enter URL" values="<%= @painting.photo %>">
+		<input type="text" name="photo" placeholder="Enter URL" value="<%= @painting.photo %>">
 	</div>
 	<div>
 		<label>Description</label>
 		<textarea name="desciption" placeholder="Description"><%= @painting.description %></textarea>
 	</div>
 	<div>
-		<input type="date" name="Date">
+		<input type="date" name="day" value="Date">
 	</div>
 	<div>
 		<input type="submit" value="Save Painting">
 	</div>
-	<div>
+	<!-- <div>
 		<input type="hidden" name="_method" value="DELETE">
 		<input type="submit" value="Delete">
-	</div>
+	</div> -->
 </form>

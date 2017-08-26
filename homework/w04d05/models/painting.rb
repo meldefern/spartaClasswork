@@ -2,6 +2,25 @@ class Painting
 
 	attr_accessor :id, :photo, :description, :day
 
+	# Saves a new entry and inputs to database
+	# Since it's static, and an instance has been created,
+	# we need to use [instancename].connect rather than self
+	def save
+
+		conn = Painting.open_connection
+
+		if(!self.id)
+			# Insert a new record into the database
+			sql = "INSERT INTO painting (photo, description, day) VALUES ('#{self.photo}', '#{self.description}', '#{self.day}') "
+		else
+			# Update an existing one
+			sql = "UPDATE painting SET photo='#{self.photo}', description='#{self.description}', day='#{self.day}' WHERE id=#{self.id}"
+		end
+
+		conn.exec(sql)
+
+	end
+
 	def self.open_connection
 
 		PG.connect(dbname: "gallery")
@@ -41,6 +60,16 @@ class Painting
 
 	end
 
+	def self.destroy id
+
+		conn = self.open_connection
+
+		sql = "DELETE FROM painting WHERE id=#{id}"
+
+		# handle delete here
+		conn.exec(sql)
+	end
+
 	def self.hydrate painting_data
 
 		painting = Painting.new
@@ -53,6 +82,5 @@ class Painting
 		painting
 
 	end
-
 
 end

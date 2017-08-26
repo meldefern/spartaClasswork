@@ -22,7 +22,14 @@ class PaintingsController < Sinatra::Base
 
 	get '/new' do
 
-		"NEW"
+		# create an empty painting object
+		@painting = Painting.new
+		@painting.id = ""
+		@painting.photo = ""
+		@painting.description = ""
+		@painting.day = ""
+
+		erb :'paintings/new'
 
 	end
 
@@ -40,19 +47,51 @@ class PaintingsController < Sinatra::Base
 
 	post '/' do
 
-		"CREATE"
+		painting = Painting.new
+
+		# bind the values
+		painting.photo = params[:photo]
+		painting.description = params[:description]
+		painting.day = params[:day]
+
+		# save the painting
+		painting.save
+
+		redirect '/'
 
 	end
 
 	put '/:id' do
 
-		"UPDATE"
+		# data is gathered in the params object
+		id = params[:id].to_i
+
+		# load the object with the id
+		painting = Painting.find id
+
+		# update the values
+		painting.photo = params[:photo]
+		painting.description = params[:description]
+		painting.day = params[:day]
+
+		# save the painting
+		painting.save
+
+		# redirect the user to a GET route; INDEX
+		redirect '/'
 
 	end
 
 	delete '/:id' do
 
-		"DELETE"
+		# get the ID
+		id = params[:id].to_i
+
+		# delete the post from the database
+		Painting.destroy id
+
+		# redirect back to the homepage
+		redirect '/'
 
 	end
 
