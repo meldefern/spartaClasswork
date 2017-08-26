@@ -58,7 +58,14 @@ class PaintingsController < Sinatra::Base
 
 	get '/:id/edit' do
 
-		"EDIT"
+		# get the ID and turn it into an integer
+		id = params[:id].to_i
+
+		# make a single post object available in the template
+		@painting = Painting.find id
+
+		erb :'paintings/edit'
+
 
 	end
 
