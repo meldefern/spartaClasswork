@@ -12,7 +12,11 @@ class PaintingsController < Sinatra::Base
 
 	get '/' do
 
-		"INDEX"
+		@title = "Gallery"
+
+		@paintings = Painting.all
+
+		erb :'paintings/index'
 
 	end
 
