@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<% @paintings.each do |painting| %>
-	<div class="row">
-		<div class="post image-div">
+	<div class="row post">
+		<div class="image-div">
 			<button type="button" data-toggle="modal" data-target="#<%= painting.id %>"><img src="/scans/<%= painting.photo %>.png"></button>
 		</div>
 		<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" class="button-container" id="<%= painting.id %>">
@@ -11,7 +11,7 @@
    				 </div>
   			</div>
 		</div>
-		<div class="post">
+		<div>
 			<div class="caption">
 				<%= painting.description %>
 			</div>

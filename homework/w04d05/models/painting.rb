@@ -64,7 +64,7 @@ class Painting
 
 		conn = self.open_connection
 
-		sql = "DELETE FROM painting WHERE id=#{id}"
+		sql = "DELETE FROM painting WHERE id='#{id}'"
 
 		# handle delete here
 		conn.exec(sql)

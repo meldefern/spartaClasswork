@@ -21,10 +21,6 @@ div.modal-content img {
 	width: 100%;
 }
 
-div.search-bar {
-	float: right;
-}
-
 div.image-div {
 	width: 535px;
 }
@@ -41,7 +37,7 @@ caption div.caption-right {
 	margin-left: 10px;
 }
 
-div.row {
+div.row.post {
 	padding-bottom: 70px
 }
 

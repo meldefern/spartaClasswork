@@ -8,7 +8,9 @@
 <div>
 	<a href="/<%= @painting.id %>/edit">edit</a>
 </div>
-<div>
-	<input type="hidden" name="_method" value="DELETE">
-	<input type="submit" value="Delete">
-</div>
+<form action="/<%= @painting.id %>" method="POST">
+	<div>
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete">
+	</div>
+</form>
