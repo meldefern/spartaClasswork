@@ -16,10 +16,6 @@ class PaintingsController < Sinatra::Base
 
 		@paintings = Painting.all
 
-		# id = params[:id].to_i
-
-		# @painting = Painting.find id
-
 		erb :'paintings/index'
 
 	end
@@ -34,6 +30,17 @@ class PaintingsController < Sinatra::Base
 		@painting.day = ""
 
 		erb :'paintings/new'
+
+	end
+
+	get '/search' do
+
+		# get the search_item from params
+		id = params[:query].to_i
+
+		@painting = Painting.find id
+
+		erb :'paintings/show'
 
 	end
 
@@ -108,7 +115,6 @@ class PaintingsController < Sinatra::Base
 		@painting = Painting.find id
 
 		erb :'paintings/edit'
-
 
 	end
 

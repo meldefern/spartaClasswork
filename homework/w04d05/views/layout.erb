@@ -12,23 +12,24 @@
   	src="https://code.jquery.com/jquery-3.2.1.js"
   	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   	crossorigin="anonymous"></script>
-  	<script type="text/javascript" src="/app.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
+	<div class="container">
+		<div class="row" class="search-bar">
 			<!-- Search navigation -->
-			<div class="col-md-12 float-right">
+			<div class="col-md-10 offset-md-2 float-right">
 				<nav class="navbar navbar-light bg-light justify-content-between">
-					<form id="target" action="/<%= @painting.id %>" class="form-inline mt-2 mt-md-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+					<form id="target" action="/search" method="GET" class="form-inline mt-2 mt-md-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="query">
 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 					</form>
 				</nav>
 			</div>
 		</div>
+	</div>
+	<div class="container-fluid">
 		<div class="row">
 			<!-- Sidebar navigation -->
 			<%= erb(:'partials/navigation') %>

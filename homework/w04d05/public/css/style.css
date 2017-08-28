@@ -41,6 +41,11 @@ div.row.post {
 	padding-bottom: 70px
 }
 
+div.search-bar {
+	margin-right: 0;
+
+}
+
 .sidebar {
 	padding-left: 0;
 	padding-right: 0;
