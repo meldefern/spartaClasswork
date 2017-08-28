@@ -9,7 +9,6 @@ CREATE TABLE painting (
 
 );
 
-INSERT INTO painting (photo , description, day) VALUES ('Painting 1' , 'Description 1' , '2017-07-01');
-INSERT INTO painting (photo , description, day) VALUES ('Painting 2' , 'Description 2' , '2017-07-02');
-INSERT INTO painting (photo , description, day) VALUES ('Painting 3' , 'Description 3' , '2017-07-03');
-INSERT INTO painting (photo , description, day) VALUES ('Painting 4' , 'Description 4' , '2017-07-04');
+INSERT INTO painting (photo , description, day) VALUES ('scan4' , 'Watercolour on Paper, 5 H x 7.4 W in' , '2017-07-05');
+INSERT INTO painting (photo , description, day) VALUES ('scan2' , 'Watercolour on Paper, 7.1 H x 10.06 W in' , '2017-08-05');
+INSERT INTO painting (photo , description, day) VALUES ('scan3' , 'Watercolour on Paper, 7.1 H x 10.1 W in' , '2017-08-19');

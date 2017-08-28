@@ -12,7 +12,7 @@ class PaintingsController < Sinatra::Base
 
 	get '/' do
 
-		@title = "Gallery"
+		@title = "Melinda Fernandes"
 
 		@paintings = Painting.all
 

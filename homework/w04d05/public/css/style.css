@@ -1,3 +1,50 @@
+body {
+	font-family: 'Cormorant Garamond', serif;
+}
+
+h2 {
+	font-family: 'EB Garamond', serif;
+}
+
+main {
+	display: block;
+	margin-top: 50px;
+
+}
+
+.post {
+	display: block;
+	clear: left;
+}
+
+div.modal-content img {
+	width: 100%;
+}
+
+div.search-bar {
+	float: right;
+}
+
+div.image-div {
+	width: 535px;
+}
+
+div.caption {
+	display: inline-block;
+	margin-left: 80px;
+}
+
+caption div.caption-right {
+	display: block;
+	float:right;
+	width: 50%;
+	margin-left: 10px;
+}
+
+div.row {
+	padding-bottom: 70px
+}
+
 .sidebar {
 	padding-left: 0;
 	padding-right: 0;
