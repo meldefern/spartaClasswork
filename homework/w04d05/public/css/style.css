@@ -52,4 +52,6 @@ div.row.post {
 	padding: 20px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	background-color: white;
+	border-right: solid 2px grey;
 }

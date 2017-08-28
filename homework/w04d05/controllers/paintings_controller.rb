@@ -16,6 +16,10 @@ class PaintingsController < Sinatra::Base
 
 		@paintings = Painting.all
 
+		# id = params[:id].to_i
+
+		# @painting = Painting.find id
+
 		erb :'paintings/index'
 
 	end

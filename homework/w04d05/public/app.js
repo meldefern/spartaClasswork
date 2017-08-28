@@ -1,8 +1,10 @@
-// $(function(event){
+$(function(event){
 
-// 	$('#datetimepicker').datetimepicker({
-// 	format: 'yyyy-mm-dd'
-// 	});
-	
-// });
+	// Event handler for search button
+	$('#target').submit(function(event){
+		alert("Handler for .submit() called.");
+		event.preventDefault();
+	})
+
+});
 
