@@ -36,9 +36,9 @@ class PaintingsController < Sinatra::Base
 	get '/search' do
 
 		# get the search_item from params
-		id = params[:query].to_i
+		query = params[:query]
 
-		@painting = Painting.find id
+		@painting = Painting.find_by_description query
 
 		erb :'paintings/show'
 

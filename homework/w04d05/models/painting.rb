@@ -60,6 +60,22 @@ class Painting
 
 	end
 
+	def self.find_by_description desc
+
+		conn = self.open_connection
+
+		sql = "SELECT * FROM painting WHERE description LIKE '%#{desc}%' LIMIT 1"
+
+		# PG always returns an array
+		paintings = conn.exec(sql)
+
+		# bind just the first and return
+		painting = self.hydrate paintings[0]
+
+		painting
+
+	end
+
 	def self.destroy id
 
 		conn = self.open_connection
