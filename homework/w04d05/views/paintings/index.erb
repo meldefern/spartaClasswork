@@ -1,0 +1,24 @@
+<div class="container-fluid">
+	<% @paintings.each do |painting| %>
+	<div class="row post">
+		<div class="image-div">
+			<button type="button" data-toggle="modal" data-target="#<%= painting.id %>"><img src="/scans/<%= painting.photo %>.png"></button>
+		</div>
+		<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" class="button-container" id="<%= painting.id %>">
+  			<div class="modal-dialog modal-lg" role="document">
+   				 <div class="modal-content">
+   				 		<img src="/scans/<%= painting.photo %>.png" class="img-fluid">
+   				 </div>
+  			</div>
+		</div>
+		<div>
+			<div class="caption">
+				<%= painting.description %>
+			</div>
+			<div class="caption" id="caption-right">
+				<a href="/<%= painting.id %>"><%= painting.day %></a>
+			</div>
+		</div>
+	</div>	
+	<% end %>
+</div>

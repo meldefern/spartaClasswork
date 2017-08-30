@@ -1,0 +1,62 @@
+body {
+	font-family: 'Cormorant Garamond', serif;
+}
+
+h2 {
+	font-family: 'EB Garamond', serif;
+}
+
+main {
+	display: block;
+	margin-top: 50px;
+
+}
+
+.post {
+	display: block;
+	clear: left;
+}
+
+div.modal-content img {
+	width: 100%;
+}
+
+div.image-div {
+	width: 535px;
+}
+
+div.caption {
+	display: inline-block;
+	margin-left: 80px;
+}
+
+caption div.caption-right {
+	display: block;
+	float:right;
+	width: 50%;
+	margin-left: 10px;
+}
+
+div.row.post {
+	padding-bottom: 70px
+}
+
+div.search-bar {
+	margin-right: 0;
+
+}
+
+.sidebar {
+	padding-left: 0;
+	padding-right: 0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: white;
+	border-right: solid 2px grey;
+}

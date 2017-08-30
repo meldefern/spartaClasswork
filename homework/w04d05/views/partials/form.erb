@@ -1,0 +1,26 @@
+<form action="/<%= @painting.id %>" method="POST">
+	<% if(@painting.id != "") %>
+		<input type="hidden" name="_method" value="PUT">
+	<% end %>
+	<div class="form-group row">
+		<label class="col-2 col-form-label">Painting Filename</label>
+		<div class="col-10">
+			<input class="form-control" type="text" name="photo" placeholder="Enter Filename" value="<%= @painting.photo %>">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-2 col-form-label">Description</label>
+		<div class="col-10">
+			<textarea class="form-control" type="text" name="description" placeholder="Description"><%= @painting.description %></textarea>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-2 col-form-label">Date</label>
+		<div class="col-10">
+			<input class="form-control" type="date" name="day" data-date-format="yyyy/mm/dd">
+		</div>
+	</div>
+	<div>
+		<button type="submit">Save Painting</button>
+	</div>
+</form>

@@ -1,0 +1,16 @@
+<img src="/scans/<%= @painting.photo %>.png">
+<div>
+	<%= @painting.description %>
+</div>
+<div>
+	<%= @painting.day %>
+</div>
+<div>
+	<a href="/<%= @painting.id %>/edit">edit</a>
+</div>
+<form action="/<%= @painting.id %>" method="POST">
+	<div>
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete">
+	</div>
+</form>
