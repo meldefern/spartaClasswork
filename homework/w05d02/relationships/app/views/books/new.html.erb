@@ -1,7 +1,5 @@
 <h1>New Book</h1>
 
-<%= render 'form', book: @book %>
-
-<%= collection_select(:book, :author_id, Author.all, :id, :author_name, prompt: "Author") %>
+<%= render 'form', book: @book, author_name: @author_name %>
 
 <%= link_to 'Back', books_path %>
