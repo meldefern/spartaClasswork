@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :author_id %>
-    <%= form.collection_select(:author_id, Author.all, :id, :author_name, prompt: true) %>
+    <%= form.collection_select(:author_id, Author.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">
