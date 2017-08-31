@@ -1,0 +1,9 @@
+<p>This is the Users index</p>
+
+<% @users.each do |user| %>
+	<p><%= user.name %></p>
+	<%= link_to 'Show', user %>
+
+<% end %>
+
+
